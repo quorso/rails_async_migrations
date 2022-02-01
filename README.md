@@ -112,6 +112,9 @@ RailsAsyncMigrations.config do |config|
 
   # sidekiq queue name to use for async migrations
   config.sidekiq_queue = :custom_queue
+
+  # delay before running migrations
+  config.delay = 1.minute
 end
 ```
 
