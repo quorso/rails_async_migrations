@@ -5,7 +5,7 @@ module RailsAsyncMigrations
       class FireMigrationWorker
         include ::Sidekiq::Worker
 
-        sidekiq_options queue: :default, retry: false
+        sidekiq_options queue: :default
 
         def perform(migration_id)
           Migration::FireMigration.new(
