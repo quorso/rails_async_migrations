@@ -115,6 +115,9 @@ RailsAsyncMigrations.config do |config|
 
   # delay before running migrations
   config.delay = 1.minute
+
+  # number of attempts to retry the fire migrations job
+  config.retry = 20
 end
 ```
 
